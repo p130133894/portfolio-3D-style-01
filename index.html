@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My 3D Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="A modern interactive 3D portfolio experience." />
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <header class="site-header">
+    <div class="logo" aria-label="Logo"> <span class="logo-accent">(&lt;/&gt;)</span> MyPortfolio </div>
+    <nav class="nav">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+        <span class="sun">☀️</span><span class="moon">🌙</span>
+      </button>
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <h1 class="gradient-text">
+          <span class="line">Hi, I'm <strong>Your Name</strong>.</span>
+          <span class="line delay">I craft immersive web experiences.</span>
+        </h1>
+        <p class="tagline reveal">Front‑End Developer • Creative Coder • Problem Solver</p>
+        <div class="cta-group reveal">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn ghost">Get in Touch</a>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="panel">
+      <div class="panel-inner reveal">
+        <h2 class="section-title">About Me</h2>
+        <p>
+          I'm a passionate developer focused on building engaging, performant, and aesthetic web interfaces.
+          I love blending code, design, and motion to tell memorable digital stories.
+        </p>
+        <ul class="chips">
+          <li>JavaScript</li><li>CSS Art</li><li>Web Performance</li><li>WebGL Basics</li><li>Accessibility</li><li>UI Animation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="panel">
+      <div class="panel-inner">
+        <h2 class="section-title reveal">Selected Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card tilt reveal" tabindex="0">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <h3>Project One</h3>
+              <p>A sleek SPA with custom animations & dynamic theming.</p>
+              <div class="tags"><span>SPA</span><span>Animation</span></div>
+            </div>
+          </article>
+          <article class="project-card tilt reveal" tabindex="0">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <h3>3D Visualizer</h3>
+              <p>Canvas-based 3D particle visualizer with depth simulation.</p>
+              <div class="tags"><span>Canvas</span><span>Particles</span></div>
+            </div>
+          </article>
+          <article class="project-card tilt reveal" tabindex="0">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <h3>Design System</h3>
+              <p>Accessible component library with utility-first tokens.</p>
+              <div class="tags"><span>A11y</span><span>Design</span></div>
+            </div>
+          </article>
+          <article class="project-card tilt reveal" tabindex="0">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <h3>Micro Interactions</h3>
+              <p>Collection of delightful UI micro-interactions in pure CSS/JS.</p>
+              <div class="tags"><span>UX</span><span>Micro UI</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel contact-panel">
+      <div class="panel-inner reveal">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>Have an opportunity, idea, or just want to say hi? Let’s connect.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submission demo. Integrate backend.');">
+          <div class="f-row">
+            <label>
+              <span>Name</span>
+              <input type="text" required placeholder="Jane Doe">
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" required placeholder="you@example.com">
+            </label>
+          </div>
+          <label class="full">
+            <span>Message</span>
+            <textarea rows="5" required placeholder="Your message..."></textarea>
+          </label>
+          <button type="submit" class="btn primary wide">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Your Name. Built with HTML • CSS • JS.</p>
+  </footer>
+
+  <div class="noise"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
